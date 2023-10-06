@@ -1,0 +1,12 @@
+package ex06;
+
+
+import java.util.function.Function;
+
+
+public class Lambda7_1 {
+	public static void main(String[] args) {
+		Function<Integer, Integer> f1 = x -> x*x; 
+		System.out.println(f1.apply(5));
+	}
+}

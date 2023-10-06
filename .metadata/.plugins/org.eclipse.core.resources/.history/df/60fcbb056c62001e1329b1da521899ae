@@ -1,0 +1,21 @@
+package ex06;
+
+@FunctionalInterface
+interface exam5{
+	int sumArr(int[] arr);
+
+}
+
+
+
+public class Lambda9 {
+	public static void main(String[] args) {
+		exam5 cal = 
+				int sum = 0;
+				for(int i :arr)
+					sum += i;
+				return sum;
+
+		System.out.println(cal.sumArr(int[]));
+	}
+}

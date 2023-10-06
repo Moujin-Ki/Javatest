@@ -1,0 +1,62 @@
+package com.movie;
+
+public class MainMenu extends AbstractMenu{
+	
+	private static final MainMenu instance = new MainMenu(null);
+	private static final String MAIN_MENU_TEXT =
+			"1. 영화 예매하기\n"+
+			"2. 예매 확인하기\n"+
+			"3. 영화 취소하기\n"+
+			"4. 관리자 메뉴로 이동\n"+
+			"q. 종료\n\n"+
+			"메뉴를 선택하세요: ";
+	
+	private MainMenu(Menu prevmenu) {
+		super(MAIN_MENU_TEXT, prevmenu);
+	}
+	
+	public static MainMenu getInstance() {
+		return instance;
+	}
+	@Override
+	public Menu next() {
+		
+		switch(sc.nextLine()) {
+		case "2":
+			checkReservation();
+			return this;
+		case "3":
+			cancleReservation();
+			return this;
+		case "4":
+			if(!checkAdminPassword()) {
+				System.out.println(">> 비밀번호가 틀렸습니다.");
+				return this;
+			}
+			AdminMenu adminMenu = AdminMenu.getInstance();
+			adminMenu.SetPrevMenu(this);
+			return adminMenu;
+		case "q" : return prevMenu;
+		default : return this;
+		}
+	}
+	
+	private void checkReservation() {
+		System.out.println("예매번호를 입력하세요: ");
+		try {
+			Reservation r = Reservation.findById(sc.nextLine());
+			if(r != null) {
+				System.out.printf(">> [확인 완료] %s\n", r.toString());
+			}else {
+				System.out.println(">> 예매 내역이 업습니다. %s\n");
+			}
+		} catch (Exception e) {
+			System.out.println(">> 파일 입출력에 문제가 있습니다. %s\n");
+		}
+	}
+	
+	private boolean checkAdminPassword() {
+		System.out.println("관리자 비밀번호를 입력하세요: ");
+		return "aa".equals(sc.nextLine());
+	}
+}

@@ -1,0 +1,18 @@
+package ex06;
+
+@FunctionalInterface
+interface exam4{
+	int roll(int x);
+
+}
+
+
+public class Lambda8 {
+	public static void main(String[] args) {
+		exam4 cal = 
+			(x)-> { return (int)(Math.random()*6);
+		};
+
+		System.out.println(cal.roll(3));
+	}
+}

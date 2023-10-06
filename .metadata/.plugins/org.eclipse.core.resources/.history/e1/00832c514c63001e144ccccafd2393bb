@@ -1,0 +1,14 @@
+package ex03;
+
+public class CurrentThreadName2 {
+	
+	public static void main(String[] args) {
+		
+		Thread thread = Thread.currentThread();
+		
+		String name = thread.getName();
+		System.out.println("thread name: " + name);
+		
+	}
+
+}

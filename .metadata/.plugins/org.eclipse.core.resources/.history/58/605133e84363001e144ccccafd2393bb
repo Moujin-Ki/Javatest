@@ -1,0 +1,9 @@
+package ex02;
+
+public class StudentStream {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package ex10;
+
+public class 전화번호명단 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

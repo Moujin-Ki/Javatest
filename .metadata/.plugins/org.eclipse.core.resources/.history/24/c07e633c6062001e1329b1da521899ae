@@ -1,0 +1,19 @@
+package ex06;
+
+interface PRintable{
+	void print(String msg);
+}
+
+class Printer implements Printable{
+	
+	@Override
+	public void print(String msg) {
+		System.out.println(msg);
+	}
+}
+
+public class Lambda1 {
+	public static void main(String[] args) {
+		
+	}
+}

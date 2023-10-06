@@ -1,0 +1,22 @@
+package ex06;
+
+@FunctionalInterface
+interface exam5{
+	int sumArr(int[] arr);
+
+}
+
+int sum = 0;
+for(int i :arr)
+	sum += i;
+rerunt sum;
+
+public class Lambda9 {
+	public static void main(String[] args) {
+		exam5 cal = 
+			(x)-> { return (int)(Math.random()*6);
+		};
+
+		System.out.println(cal.sumArr(3));
+	}
+}

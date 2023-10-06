@@ -1,0 +1,18 @@
+package ex06;
+
+@FunctionalInterface
+interface exam03{
+	int square(int x);
+
+}
+
+
+public class Lambda7_1 {
+	public static void main(String[] args) {
+		exam03 cal = 
+			x->  x * x;
+	
+
+		System.out.println(cal.square(5));
+	}
+}

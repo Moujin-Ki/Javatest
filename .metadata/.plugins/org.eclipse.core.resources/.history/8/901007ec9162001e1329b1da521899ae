@@ -1,0 +1,9 @@
+package ex07;
+
+public class ForeachExam {
+
+	public static void main(String[] args) {
+
+	}
+
+}

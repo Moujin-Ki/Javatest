@@ -1,0 +1,18 @@
+package ex06;
+
+@FunctionalInterface
+interface Cal2{
+	int max(int num1, int num2);
+
+}
+
+
+public class Lambda5 {
+	public static void main(String[] args) {
+		Cal2 cal = 
+			(num1, num2)->  num1>num2 ? num1: num2;
+				
+
+		System.out.println(cal.max(15, 10));
+	}
+}

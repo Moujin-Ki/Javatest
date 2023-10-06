@@ -1,0 +1,18 @@
+package ex06;
+
+import java.util.function.Supplier;
+
+public class Lambda8_1 {
+	public static void main(String[] args) {
+		Supplier<Integer> exam = () -> (int)(Math.random()*6);
+		System.out.println(exam.get());
+		
+//		Supplier<Integer> s2 = new Supplier<Integer>() {
+//			
+//			@Override
+//			public Integer get() {
+//				return null;
+//			}
+//		};
+	}
+}

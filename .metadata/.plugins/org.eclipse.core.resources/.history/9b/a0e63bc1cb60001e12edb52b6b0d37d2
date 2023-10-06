@@ -1,0 +1,7 @@
+package com.movie;
+
+public class AdminMenu extends AbstractMenu {
+	private static final AdminMenu instance = new AdminMenu(null);
+	private static final String ADMIN_MENU_TEXT =
+
+}

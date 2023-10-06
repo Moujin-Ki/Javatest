@@ -1,0 +1,32 @@
+package com.movie;
+
+public class MainMenu extend AbstractMEnu{
+	
+	private static final MainMenu instance = new MainMEnu(null);
+	private static final String MAIN_MENU_TEXT =
+			"1. 영화 예매하기\n"+
+			"2. 영화 확인하기\n"+
+			"3. 영화 취소하기\n"+
+			"4. 관리자 메뉴로 이동\n"+
+			"q. 종료\n\ㅜ"+
+			"메뉴를 선택하세요: "+
+	
+	private MainMenu(String prevmenu) {
+		super(MAIN_MENU_TEXT, prevmenu);
+	}
+	
+	public static MainMenu getInstacne() {
+		return instance;
+	}
+	@Override
+	public Menu next() {
+		
+		switch(sc.nextLine()) {
+		case "q" : return prevMenu;
+		default : return this;
+		}
+		
+		return null;
+	}
+
+}

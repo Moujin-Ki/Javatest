@@ -1,0 +1,11 @@
+package ex03;
+
+public class CurrentThreadName2 {
+	
+	public static void main(String[] args) {
+		
+		Runable
+		
+	}
+
+}
